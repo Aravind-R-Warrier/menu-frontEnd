@@ -1,0 +1,56 @@
+/* Media query for small screens (mobile) */
+@media (max-width: 768px) {
+    /* Ensure the parent container has relative positioning */
+    .col-12.col-md-10 {
+        position: relative;
+        width:auto;
+    }
+
+    /* Adjust the cocktail image position for small screens */
+    .cocktail {
+        position: absolute;
+        top: 102px; 
+        left: 10px; 
+        transform: translateX(-820px); 
+        z-index: 1;
+        height: 81px; 
+        width: 74px;
+  
+    }
+    .juice{
+        position: absolute;
+        top: 102px; 
+        left: 10px; 
+        transform: translateX(-40px); 
+        z-index: 1;
+        height: 111px; 
+        width: 76px;
+    }
+
+    
+      /* Adjust the heading font size and other properties for small screens */
+      .heading {
+        font-size: 30px; /* Responsive font size (based on viewport width) */
+        line-height: 35px; /* Adjust line height proportionally */
+        text-align: center; /* Center the text on smaller screens */
+      }
+    
+      /* Adjust line images */
+      .heading img {
+        width: 40px; /* Reduce line width for smaller screens */
+        margin: 0 10px; /* Add space between lines and heading */
+      }
+    
+      /* Allow wrapping for item names and prices */
+      .item-name-price span {
+        font-size: 18px;
+        line-height: 28px; /* Adjust line height for readability */
+      }
+    
+      /* Adjust the description font size */
+      .item-name-price span + span {
+        font-size: 14px; /* Smaller font size for description text */
+        line-height: 20px;
+        opacity: 0.75;
+      }
+}
