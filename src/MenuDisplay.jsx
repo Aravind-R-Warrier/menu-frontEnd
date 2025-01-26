@@ -22,9 +22,9 @@ function MenuDisplay({ menu }) {
         }}
       >
         <div className="row h-100">
-          {/* Left Column - hidden on mobile */}
+        
           <div className="col-12 col-md-1 d-flex flex-column justify-content-start align-items-start d-none d-md-flex">
-            {/* Retain your current left column elements */}
+            
           </div>
 
           {/* Center Column */}
@@ -118,9 +118,11 @@ function MenuDisplay({ menu }) {
                           fontFamily: 'Oswald',
                         }}
                       >
-                        {menu.description} <br />
+                       
                         {item.name} - ${item.price}
                       </span>
+                      <span style={{fontFamily:'Oswald'}}> {menu.description}</span>
+
                     </div>
                   ))}
                 </div>
