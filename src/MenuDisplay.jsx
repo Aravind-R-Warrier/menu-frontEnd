@@ -57,7 +57,7 @@ function MenuDisplay({ menu }) {
             />
             <div
               style={{
-                width: '100%',
+                width: '100vw',
                 height: '416px',
                 border: '1px solid #FFFFFF',
                 display: 'flex',
