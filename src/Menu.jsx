@@ -6,13 +6,13 @@ import MenuDisplay from './MenuDisplay';
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
-  const [selectedMenu, setSelectedMenu] = useState(null);  // New state to store selected menu
+  const [selectedMenu, setSelectedMenu] = useState(null);  
   const navigate = useNavigate();
 
   // Fetch menu items from API
   useEffect(() => {
     axios
-      .get('https://menubackend-1.onrender.com/menus') // Replace with your API endpoint
+      .get('https://menubackend-1.onrender.com/menus') 
       .then((response) => {
         setMenuItems(response.data);
       })
@@ -21,9 +21,9 @@ function Menu() {
       });
   }, []);
 
-  // Function to handle menu selection
+  
   const handleMenuSelection = (menu) => {
-    setSelectedMenu(menu);  // Set the selected menu
+    setSelectedMenu(menu);  
   };
 
   return (
@@ -36,7 +36,7 @@ function Menu() {
           height: '79px',
         }}
       >
-        {/* Render dynamic menu items from API */}
+        
         {menuItems.map((item, index) => (
           <button
             key={index}
@@ -55,13 +55,13 @@ function Menu() {
               background: item.active ? '#0796EF' : '#000000',
               letterSpacing: '0.03em',
             }}
-            onClick={() => handleMenuSelection(item)} // Set selected menu
+            onClick={() => handleMenuSelection(item)} 
           >
             {item.name}
           </button>
         ))}
 
-        {/* Static "Add" Button (keeps its original position) */}
+      
         <button
           className="styled-button"
           style={{
@@ -78,13 +78,13 @@ function Menu() {
             background: '#000000',
             letterSpacing: '0.03em',
           }}
-          onClick={() => navigate('/add-menu')} // Navigate to AddMenu
+          onClick={() => navigate('/add-menu')} 
         >
           ADD
         </button>
       </div>
       
-      {/* Pass selected menu to MenuDisplay */}
+    
       <MenuDisplay menu={selectedMenu} />
     </>
   );
