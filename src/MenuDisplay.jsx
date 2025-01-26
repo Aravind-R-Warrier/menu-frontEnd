@@ -121,7 +121,7 @@ function MenuDisplay({ menu }) {
                        
                         {item.name} - ${item.price}
                       </span>
-                      <span style={{fontFamily:'Oswald'}}> {menu.description}</span>
+                      <span style={{fontFamily:'Oswald'}}> {menu.items[0].description}</span>
 
                     </div>
                   ))}
