@@ -63,7 +63,7 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Navbar Items (for large screens) */}
+      
       <ul className={`nav justify-content-end ${isMenuOpen ? 'd-block' : 'd-none'} d-sm-flex`} style={{ zIndex: 1 }}>
         <li className="nav-item">
           <a className="nav-link text-white" style={{
