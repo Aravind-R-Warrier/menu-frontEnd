@@ -7,7 +7,7 @@ import './MenuDisplay.css';
 
 function MenuDisplay({ menu }) {
   if (!menu) {
-    return <div className='bg-black text-white text-center'>Please select a menu.</div>; // Add a message if no menu is selected
+    return <div className='bg-black text-white text-center'>Please select a menu.</div>; 
   }
 
   return (
@@ -98,7 +98,7 @@ function MenuDisplay({ menu }) {
                     }}
                     className="heading"
                   >
-                    {menu.name} {/* Display dynamic menu name */}
+                    {menu.name} 
                   </span>
                   <img src={line} style={{ width: '68px' }} alt="line" />
                 </div>
