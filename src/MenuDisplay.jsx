@@ -33,8 +33,8 @@ function MenuDisplay({ menu }) {
               className="juice"
               style={{
                 position: 'absolute',
-                top: '-2px',
-                left: '18px',
+                  top: '-25px',
+                left: '-30px',
                 zIndex: 1,
                 height: '281px',
                 width: '190px',
@@ -46,8 +46,8 @@ function MenuDisplay({ menu }) {
               className="cocktail"
               style={{
                 position: 'absolute',
-                top: '400px',
-                left: '1012px',
+                 top: '390px',
+                left: '1082px',
                 zIndex: 1,
                 height: '207px',
                 width: '192px',
@@ -130,9 +130,9 @@ function MenuDisplay({ menu }) {
             </div>
           </div>
 
-          {/* Right Column - hidden on mobile */}
+          
           <div className="col-12 col-md-1 d-flex flex-column justify-content-end align-items-end d-none d-md-flex">
-            {/* Retain your current right column elements */}
+           
           </div>
         </div>
       </div>
