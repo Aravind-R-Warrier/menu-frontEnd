@@ -28,7 +28,7 @@ function Hero() {
                 lineHeight: '111.15px',
                 letterSpacing: '3%',
                 textAlign: 'center',
-                // Mobile responsiveness (media query style)
+              
                 '@media (max-width: 768px)': {
                   fontSize: '40px',
                   lineHeight: '59.28px'
@@ -47,7 +47,7 @@ function Hero() {
                 lineHeight: '21.82px',
                 color: '#BBBBBB',
                 textAlign: 'justify',
-                // Mobile responsiveness (media query style)
+          
                 '@media (max-width: 768px)': {
                   fontSize: '16px',
                   lineHeight: '19.39px'
@@ -64,7 +64,7 @@ function Hero() {
                 lineHeight: '21.82px',
                 color: '#BBBBBB',
                 textAlign: 'justify',
-                // Mobile responsiveness (media query style)
+                
                 '@media (max-width: 768px)': {
                   fontSize: '16px',
                   lineHeight: '19.39px'
