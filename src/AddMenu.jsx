@@ -12,6 +12,12 @@ const AddMenu = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+   
+    if (items.length === 0) {
+      alert('Please add at least one item to the menu.');
+      return;
+    }
+
     const newMenu = {
       name: menuName,
       description: menuDescription,
@@ -25,13 +31,15 @@ const AddMenu = () => {
   };
 
   const handleAddItem = () => {
-    setItems([
-      ...items,
-      { name: itemName, description: itemDescription, price: itemPrice },
-    ]);
-    setItemName('');
-    setItemDescription('');
-    setItemPrice('');
+    if (itemName && itemDescription && itemPrice) {
+      setItems([
+        ...items,
+        { name: itemName, description: itemDescription, price: itemPrice },
+      ]);
+      setItemName('');
+      setItemDescription('');
+      setItemPrice('');
+    }
   };
 
   return (
@@ -62,7 +70,7 @@ const AddMenu = () => {
           />
         </div>
 
-        {/* Add Items Section */}
+       
         <h4 className="mt-4">Add Items to the Menu</h4>
         <div className="row g-3 align-items-end">
           <div className="col-md-4">
@@ -73,7 +81,7 @@ const AddMenu = () => {
               placeholder="Enter item name"
               value={itemName}
               onChange={(e) => setItemName(e.target.value)}
-              required
+              required={!items.length}
             />
           </div>
           <div className="col-md-4">
@@ -84,7 +92,7 @@ const AddMenu = () => {
               placeholder="Enter item description"
               value={itemDescription}
               onChange={(e) => setItemDescription(e.target.value)}
-              required
+              required={!items.length}
             />
           </div>
           <div className="col-md-2">
@@ -95,7 +103,7 @@ const AddMenu = () => {
               placeholder="Enter price"
               value={itemPrice}
               onChange={(e) => setItemPrice(e.target.value)}
-              required
+              required={!items.length}
             />
           </div>
           <div className="col-md-2">
@@ -109,7 +117,7 @@ const AddMenu = () => {
           </div>
         </div>
 
-        {/* List of Added Items */}
+       
         {items.length > 0 && (
           <div className="mt-4">
             <h5>Items:</h5>
@@ -140,3 +148,4 @@ const AddMenu = () => {
 };
 
 export default AddMenu;
+
